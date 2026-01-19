@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guruprasad Shipekar | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0b0f19',
+                        card: '#111625',
+                        primary: '#00d2ff', // Cyan
+                        secondary: '#3a7bd5', // Blue
+                        muted: '#a0aab5',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-main': 'linear-gradient(90deg, #00d2ff, #3a7bd5)',
+                        'hero-radial': 'radial-gradient(circle at top right, #1a253a 0%, #0b0f19 60%)',
+                    },
+                    boxShadow: {
+                        'glow': '0 10px 30px -10px rgba(0, 210, 255, 0.2)',
+                        'glow-hover': '0 0 15px rgba(0, 210, 255, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom styles just for the Scroll Animation specific behavior */
+        .hidden-el {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-dark text-white font-sans overflow-x-hidden">
+
+    <header class="fixed top-0 w-full bg-[#0b0f19]/95 backdrop-blur-md z-50 py-5 border-b border-white/10 transition-all">
+        <div class="container mx-auto px-5">
+            <nav class="flex justify-between items-center flex-wrap gap-5 md:gap-0">
+                <div class="text-3xl font-bold text-primary">GTS</div>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base font-medium">
+                    <a href="#about" class="hover:text-primary transition-colors">About</a>
+                    <a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+                    <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="min-h-screen flex items-center pt-40 pb-24 md:pt-40 md:pb-24 bg-hero-radial relative" id="home">
+        <div class="container mx-auto px-5 flex flex-col-reverse lg:flex-row items-center justify-between w-full">
+            <div class="flex-1 lg:pr-12 mt-10 lg:mt-0 text-center lg:text-left hidden-el">
+                <div class="text-lg md:text-xl text-muted font-semibold mb-5 tracking-[2px] uppercase">MCA STUDENT</div>
+                <h1 class="text-4xl md:text-6xl font-bold mb-3 leading-tight">Guruprasad Shipekar <br> <span class="text-primary">Data Analyst</span></h1>
+                
+                <p class="text-lg md:text-xl text-white mb-4">SQL • Python • Power BI</p>
+                <p class="text-muted leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                    Adaptive, disciplined, team-oriented personality with a strong learning mindset. 
+                    Hands-on experience in Data Analysis, SQL projects, and software testing.
+                </p>
+                
+                <div class="flex gap-4 flex-wrap justify-center lg:justify-start">
+                    <a href="#projects" class="px-8 py-3 rounded-full font-semibold border border-white/20 bg-card text-white hover:border-primary hover:text-primary hover:shadow-glow-hover hover:-translate-y-1 transition-all duration-300">View Projects</a>
+                    <a href="#contact" class="px-8 py-3 rounded-full font-semibold border border-white/20 bg-card text-white hover:border-primary hover:text-primary hover:shadow-glow-hover hover:-translate-y-1 transition-all duration-300">Contact Me</a>
+                    <a href="Guruprasad_Shipekar_CV.pdf" download class="px-8 py-3 rounded-full font-semibold border border-white/20 bg-card text-white hover:border-primary hover:text-primary hover:shadow-glow-hover hover:-translate-y-1 transition-all duration-300">Download CV</a>
+                </div>
+            </div>
+            
+            <div class="flex-1 flex justify-center relative z-10">
+                <div class="relative w-[280px] h-[280px] md:w-[350px] md:h-[350px]">
+                    <img src="port.jpeg" alt="Guruprasad Shipekar" class="w-full h-full object-cover rounded-full border-4 border-card shadow-[0_0_0_10px_rgba(0,210,255,0.1),0_0_60px_rgba(0,210,255,0.2)]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-card" id="about">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative pb-4 hidden-el after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-main after:rounded-sm">About Me</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="hidden-el">
+                    <h3 class="text-2xl font-bold text-primary mb-5">Who I Am</h3>
+                    <p class="text-muted mb-4 leading-relaxed">I am a smart-working and adaptive individual with a strong belief in teamwork and discipline. My passion lies in learning new technologies and applying them to solve real-world problems.</p>
+                    <p class="text-muted leading-relaxed">My journey combines academic rigor with a professional yet friendly approach to technical challenges.</p>
+                </div>
+                <div class="hidden-el">
+                    <h3 class="text-2xl font-bold text-primary mb-5">Education</h3>
+                    
+                    <div class="bg-dark p-5 rounded-xl mb-4 border-l-4 border-primary">
+                        <h4 class="text-lg font-bold mb-1">Master of Computer Application (MCA)</h4>
+                        <span class="text-sm text-muted">Shivaji University, Kolhapur (2024–2026)</span>
+                    </div>
+                    
+                    <div class="bg-dark p-5 rounded-xl mb-4 border-l-4 border-primary">
+                        <h4 class="text-lg font-bold mb-1">Bachelor of Computer Science (BCS)</h4>
+                        <span class="text-sm text-muted">Vivekanand College, Kolhapur (2021–2023)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24" id="skills">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative pb-4 hidden-el after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-main after:rounded-sm">Technical Arsenal</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="bg-card p-8 rounded-2xl text-center border border-white/5 hover:-translate-y-2 hover:border-primary transition-all duration-300 hidden-el">
+                    <i class="fas fa-code text-5xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
+                    
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Python (Pandas, NumPy)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>SQL & Database</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Power BI & Visualization</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Advanced Excel</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl text-center border border-white/5 hover:-translate-y-2 hover:border-primary transition-all duration-300 hidden-el">
+                    <i class="fas fa-tools text-5xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-6">Tools</h3>
+                    
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>MS Excel</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Power BI</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Jupyter Notebook</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>SQL Workbench</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl text-center border border-white/5 hover:-translate-y-2 hover:border-primary transition-all duration-300 hidden-el">
+                    <i class="fas fa-users text-5xl text-primary mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-6">Soft Skills</h3>
+                    
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Problem-solving</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Critical Thinking</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Communication</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4 text-left">
+                        <div class="flex justify-between text-sm text-muted font-medium mb-1">
+                            <span>Team Collaboration</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-main rounded-full" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-card" id="experience">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative pb-4 hidden-el after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-main after:rounded-sm">Professional Experience</h2>
+            <div class="max-w-4xl mx-auto relative">
+                
+                <div class="bg-dark p-8 rounded-2xl mb-8 relative border border-white/5 hover:scale-[1.02] hover:border-primary transition-all duration-300 hidden-el">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
+                        <div>
+                            <div class="text-xl font-semibold text-white">Data Analyst Intern</div>
+                            <div class="text-primary font-medium">TextCode Technologies</div>
+                        </div>
+                        <div class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium">Nov 2025 – Present</div>
+                    </div>
+                    <p class="text-muted leading-relaxed">Contributing to data analysis projects and learning real-world applications of data technologies.</p>
+                </div>
+
+                <div class="bg-dark p-8 rounded-2xl mb-8 relative border border-white/5 hover:scale-[1.02] hover:border-primary transition-all duration-300 hidden-el">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
+                        <div>
+                            <div class="text-xl font-semibold text-white">Assistant Professor</div>
+                            <div class="text-primary font-medium">S B Khade Mahavidyalaya, Koparde</div>
+                        </div>
+                        <div class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium">Sep 2023 – Oct 2025</div>
+                    </div>
+                    <p class="text-muted leading-relaxed">Delivered lectures, mentored students, and managed academic responsibilities.</p>
+                </div>
+
+                <div class="bg-dark p-8 rounded-2xl mb-8 relative border border-white/5 hover:scale-[1.02] hover:border-primary transition-all duration-300 hidden-el">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-2">
+                        <div>
+                            <div class="text-xl font-semibold text-white">Software Tester Intern</div>
+                            <div class="text-primary font-medium">Quiesta Technologies Pvt. Ltd., Pune</div>
+                        </div>
+                        <div class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-medium">Jun 2023 – Dec 2023</div>
+                    </div>
+                    <p class="text-muted leading-relaxed">Performed software testing, identified bugs, and ensured quality assurance standards.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24" id="projects">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative pb-4 hidden-el after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-main after:rounded-sm">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-card p-8 rounded-2xl border-t-4 border-primary hover:-translate-y-2 hover:shadow-glow transition-all duration-300 hidden-el">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold mb-2">Employee Dashboard Analysis</h3>
+                        <a href="https://github.com/Guru1221/EmployeeDashbaordAnalysis" target="_blank" class="text-muted hover:text-primary transition-colors" title="View Code">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <span class="text-sm text-primary block mb-4">Excel Project | Dashboard</span>
+                    <ul class="list-disc list-inside text-muted space-y-2">
+                        <li>Interactive dashboard creation</li>
+                        <li>Data cleaning and processing</li>
+                        <li>Visualizing HR metrics & Trends</li>
+                    </ul>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl border-t-4 border-primary hover:-translate-y-2 hover:shadow-glow transition-all duration-300 hidden-el">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold mb-2">Online Passport Application</h3>
+                        <a href="https://github.com/Guru1221/GuruSelenium" target="_blank" class="text-muted hover:text-primary transition-colors" title="View Code">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <span class="text-sm text-primary block mb-4">Testing Project | Selenium</span>
+                    <ul class="list-disc list-inside text-muted space-y-2">
+                        <li>Functional and regression testing</li>
+                        <li>Data validation and test scenario creation</li>
+                        <li>Automation scripts using Selenium</li>
+                    </ul>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl border-t-4 border-primary hover:-translate-y-2 hover:shadow-glow transition-all duration-300 hidden-el">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold mb-2">Car Service Management</h3>
+                        <a href="https://github.com/Guru1221/" target="_blank" class="text-muted hover:text-primary transition-colors" title="View Code">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <span class="text-sm text-primary block mb-4">Degree Project | ASP.NET</span>
+                    <ul class="list-disc list-inside text-muted space-y-2">
+                        <li>Built using ASP.NET and SQL Server</li>
+                        <li>Managed service center operations</li>
+                        <li>Contributed to design, testing, and documentation</li>
+                    </ul>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl border-t-4 border-primary hover:-translate-y-2 hover:shadow-glow transition-all duration-300 hidden-el">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold mb-2">Hotel Management System</h3>
+                        <a href="https://github.com/Guru1221/SQLProjectHotelManagementSystem" target="_blank" class="text-muted hover:text-primary transition-colors" title="View Code">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <span class="text-sm text-primary block mb-4">SQL Project</span>
+                    <ul class="list-disc list-inside text-muted space-y-2">
+                        <li>Database design and SQL queries</li>
+                        <li>Focus on data management and reporting</li>
+                    </ul>
+                </div>
+
+                <div class="bg-card p-8 rounded-2xl border-t-4 border-primary hover:-translate-y-2 hover:shadow-glow transition-all duration-300 hidden-el">
+                    <div class="flex justify-between items-start">
+                        <h3 class="text-2xl font-bold mb-2">Employee Management System</h3>
+                        <a href="https://github.com/Guru1221/SQLProjectEmployeeManagementSystem" target="_blank" class="text-muted hover:text-primary transition-colors" title="View Code">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                    <span class="text-sm text-primary block mb-4">SQL Project</span>
+                    <ul class="list-disc list-inside text-muted space-y-2">
+                        <li>Database design and SQL queries</li>
+                        <li>Focus on data management and reporting</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-card">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative pb-4 hidden-el after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-main after:rounded-sm">What I Offer</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-dark p-10 rounded-2xl text-center border border-white/5 hover:-translate-y-2 hover:border-primary transition-all duration-300 hidden-el">
+                    <h3 class="text-2xl font-bold text-primary mb-5">Data Analysis & Visualization</h3>
+                    <p class="text-muted leading-relaxed">Transforming raw data into meaningful insights using Python and Power BI dashboards to drive decision-making.</p>
+                </div>
+
+                <div class="bg-dark p-10 rounded-2xl text-center border border-white/5 hover:-translate-y-2 hover:border-primary transition-all duration-300 hidden-el">
+                    <h3 class="text-2xl font-bold text-primary mb-5">Database Management</h3>
+                    <p class="text-muted leading-relaxed">Designing and optimizing SQL queries for efficient data retrieval and structured database management.</p>
+                </div>
+
+                <div class="bg-dark p-10 rounded-2xl text-center border border-white/5 hover:-translate-y-2 hover:border-primary transition-all duration-300 hidden-el">
+                    <h3 class="text-2xl font-bold text-primary mb-5">Software Testing</h3>
+                    <p class="text-muted leading-relaxed">Ensuring software quality and reliability through rigorous testing methodologies and bug tracking.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24" id="contact">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 relative pb-4 hidden-el after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-20 after:h-1 after:bg-gradient-main after:rounded-sm">Let's Work Together</h2>
+            <div class="flex flex-col lg:flex-row gap-12 bg-card p-8 md:p-12 rounded-2xl shadow-2xl hidden-el">
+                
+                <div class="flex-1">
+                    <h3 class="text-3xl font-bold mb-6">Get In Touch</h3>
+                    <p class="text-muted mb-8">Feel free to reach out for collaborations or opportunities.</p>
+                    
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fas fa-envelope text-primary text-xl w-8 text-center"></i>
+                        <span>gshipekar88@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <i class="fas fa-phone text-primary text-xl w-8 text-center"></i>
+                        <span>+91 9730791221</span>
+                    </div>
+
+                    <div class="flex gap-4 mt-8">
+                        <a href="https://linkedin.com/in/guruprasadshipekar" target="_blank" class="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Guru1221" target="_blank" class="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-1">
+                    <form action="https://formspree.io/f/xregagzb" method="POST" class="space-y-5">
+                        <input type="text" name="name" placeholder="Your Name" required class="w-full bg-dark border border-white/10 p-4 rounded-lg text-white focus:outline-none focus:border-primary transition-colors">
+                        <input type="email" name="email" placeholder="Your Email" required class="w-full bg-dark border border-white/10 p-4 rounded-lg text-white focus:outline-none focus:border-primary transition-colors">
+                        <textarea name="message" rows="5" placeholder="Your Message" required class="w-full bg-dark border border-white/10 p-4 rounded-lg text-white focus:outline-none focus:border-primary transition-colors"></textarea>
+                        <button type="submit" class="w-full py-3 rounded-lg font-semibold bg-dark border border-primary text-primary hover:bg-primary hover:text-white hover:shadow-glow-hover transition-all duration-300 cursor-pointer">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 border-t border-white/10 text-muted text-sm">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Guruprasad Tukaram Shipekar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, observerOptions);
+
+        const hiddenElements = document.querySelectorAll('.hidden-el');
+        hiddenElements.forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+</html>
